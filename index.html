@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <br>
+    <!-- Basic Page Needs
+         –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <meta charset="utf-8">
+    <title>Joint Learning of Retrieval and Deformation</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Mobile Specific Metas
+         –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- FONT
+         –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+    <!-- CSS
+         –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/skeleton.css">
+    <link rel="stylesheet" href="css/footable.standalone.min.css">
+
+    <!-- Favicon
+         –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+
+    <!-- Google icon -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <!-- Analytics -->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                               m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                              })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-86869673-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+
+    <!-- Hover effect: https://codepen.io/nxworld/pen/ZYNOBZ -->
+    <style>
+      img {
+          display: block;
+      }
+
+      .column-50 {
+          float: left;
+          width: 50%;
+      }
+      .row-50:after {
+          content: "";
+          display: table;
+          clear: both;
+      }
+
+      .floating-teaser {
+          float: left;
+          width: 30%;
+          text-align: center;
+          padding: 15px;
+      }
+      .venue strong {
+          color: #99324b;
+      }
+
+      .benchmark {
+          width: 100%;
+          max-width: 960px;
+          overflow: scroll;
+          overflow-y: hidden;
+      }
+
+    </style>
+  </head>
+  <body>
+
+    <!-- Primary Page Layout
+         –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <div class="container">
+      <h4 style="text-align:center">Joint Learning of 3D Shape Retrieval and Deformation</h4>
+      <p align="center", style="margin-bottom:12px;">
+        <a class="simple" href="https://mikacuy.github.io/">Mikaela Angelina Uy</a><sup>1</sup>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a class="simple" href="http://www.vovakim.com">Vladimir G. Kim</a><sup>2</sup>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a class="simple" href="https://mhsung.github.io">Minhyuk Sung</a><sup>3</sup>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a class="simple" href="https://noamaig.github.io">Noam Aigerman</a><sup>2</sup>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a class="simple" href="https://www.cse.iitb.ac.in/~sidch/">Siddhartha Chaudhuri</a><sup>2,4</sup>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a class="simple" href="https://geometry.stanford.edu/member/guibas/">Leonidas Guibas</a><sup>1</sup>
+      </p>
+
+      <p align="center" style="margin-bottom:20px;">
+        <sup>1</sup>Stanford University
+        <span style="display:inline-block; width: 32px"></span>
+        <sup>2</sup>Adobe Research <br>
+        <span style="display:inline-block; width: 32px"></span>
+        <sup>2</sup>KAIST <br>
+        <span style="display:inline-block; width: 32px"></span>
+        <sup>2</sup>IITB <br>                
+      </p>
+
+      <div class="venue">
+        <p align="center"> Conference on Computer Vision and Pattern Recognition (CVPR), 2021 </p>
+      </div>
+
+      <figure>
+        <img src="images/teaser3.png" style="width:100%"></img>
+        <!-- <br> -->
+      </figure>
+      <div class="caption">
+        Given an input target we use jointly-learned retrieval and deformation modules to find a source model in a heterogeneous database and align it to the target. We demonstrate that our joint learning outperforms static retrieval and non-joint baselines.
+      </div>
+
+      <br><br>
+
+      <div id="teaser" class="container" style="width:100%; margin:0; padding:0">
+        <h5>Abstract</h5>
+        <p align="justify">
+          We propose a novel technique for producing high-quality 3D models that match a given target object image or scan. Our method is based on retrieving an existing shape from a database of 3D models and then deforming its parts to match the target shape. Unlike previous approaches that in- dependently focus on either shape retrieval or deformation, we propose a joint learning procedure that simultaneously trains the neural deformation module along with the embed- ding space used by the retrieval module. This enables our network to learn a deformation-aware embedding space, so that retrieved models are more amenable to match the tar- get after an appropriate deformation. In fact, we use the embedding space to guide the shape pairs used to train the deformation module, so that it invests its capacity in learn- ing deformations between meaningful shape pairs. Further- more, our novel part-aware deformation module can work with inconsistent and diverse part-structures on the source shapes. We demonstrate the benefits of our joint training not only on our novel framework, but also on other state- of-the-art neural deformation modules proposed in recent years. Lastly, we also show that our jointly-trained method outperforms various non-joint baselines.
+          <br>
+          <br>
+        </p>
+      </div>
+
+      <div id="teaser" class="container" style="width:100%; margin:0; padding:0">
+        <h5>Video</h5>
+      <center>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/ZeDJLHdCpUQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+      </center>     
+      </div>
+
+
+    <div class="section">
+        <h5>Materials</h5>
+        <div class="container" style="width:95%">
+          <!-- Icon row -->
+          <div class="row">
+            <div class="two columns">
+              <a href="https://arxiv.org/pdf/2101.07889.pdf"><img style="border: 1px solid #ddd; border-radius: 4px; padding: 2px; width: 108px;" src="images/screenshot_main.png"></a>
+            </div>
+            <div class="two columns">
+              <a href="assets/slides.pdf"><img style="border: 1px solid #ddd; border-radius: 4px; padding: 2px; width: 108px;" src="images/screenshot_slides.png"></a>
+            </div>
+          </div>
+          <!-- Link row -->
+          <div class="row">
+            <div class="two columns">
+              <a href="https://arxiv.org/pdf/2101.07889.pdf">Paper</a>
+            </div>
+            <div class="two columns">
+              <a href="assets/slides.pdf">Slides</a>
+            </div>
+          </div>
+
+          <div class="row">
+              <br>
+              <!-- <a href="https://github.com/mikacuy/deformation_aware_embedding">Code</a> -->
+              <p>Code to be released soon!</p>
+          </div>
+
+        </div>
+      </div>
+
+  <br>
+
+  <div id="teaser" class="container" style="width:100%; margin:0; padding:0">
+    <h5>Our Approach</h5>
+    <center>
+      <img src="images/network4.png" style="width:90%"></img>
+        <div class="caption" >
+          <p align="justify">
+            During training, given a target image or a point cloud and a database of deformable sources, we retrieve a subset of source models based on their proximity in the retrieval space, and use the structure-aware deformation module (right) to fit each source. Our deformation module uses encoded target, global and per-part source codes to predict per-part deformation parameters.
+          </p>
+        </div>
+        <br>
+    </center>
+  </div>
+
+  <div id="teaser" class="container" style="width:100%; margin:0; padding:0">
+    <h5>Qualitative Results</h5>
+    <p>Image-to-Mesh</p>
+    <center>
+      <img src="images/image2mesh.png" style="width:90%"></img>
+        <div class="caption" >
+          <p align="justify">
+            Visualization of qualitative results on the image-to-mesh setup. Our network achieves the best results as shown by the thickness of legs of the chair, the shape of the back and the shape of the legs of the table.
+          </p>
+        </div>
+        <br>
+
+      <p>Point Cloud-to-Mesh</p>
+      <img src="images/pc2mesh.png" style="width:90%"></img>
+        <div class="caption" >
+          <p align="justify">
+            Visualization of qualitative results on the point cloud-to-mesh setup. Our network also achieves the best results as shown by the height of the chair seat, the base of the table, and the cabinet without shelves. 
+          </p>
+        </div>
+        <br>
+
+      <p>Joint Training on Neural Cages</p>
+      <img src="images/neural cages.png" style="width:90%"></img>
+        <div class="caption" >
+          <p align="justify">
+            We also show that the advantages of joint training is not specific to our novel deformation function, but also improves other state-of-the-art deformation modules such as neural cages. Observe that the retrieved models of our joint approaches better match the geometry of the input chair and sofa. Moreover, our structure-aware deformation function is able to match the local part geometries such as the thickness of the sofa. 
+          </p>
+        </div>
+        <br>
+
+      <p>Automatic Segmentation</p>
+      <img src="images/complementme.png" style="width:90%"></img>
+        <div class="caption" >
+          <p align="justify">
+            As manual fine-grain part annotating is a tedious task, large databases of such models are scarce.  We also show that our approach works on automatically segmented models such as those found in ComplementMe, enabling the use of our method on a wider array of source databases.
+          </p>
+        </div>
+        <br>
+
+      <p>Applications</p>
+      <img src="images/applications.png" style="width:90%"></img>
+        <div class="caption" >
+          <p align="justify">
+            Applications of our pipeline on fitting to product images from Google search and to real world scans. 
+          </p>
+        </div>
+        <br>
+
+    </center>
+  </div>
+
+		<!-- -->
+	<div class="section">
+          <h5>Citation</h5> 
+  <pre style="margin:0"><code>@inproceedings{uy-joint-cvpr21,
+      title = {Joint Learning of 3D Shape Retrieval and Deformation},
+      author = {Mikaela Angelina Uy and Vladimir G. Kim and Minhyuk Sung and Noam Aigerman and Siddhartha Chaudhuri and Leonidas Guibas},
+      booktitle = {IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},
+      year = {2021}
+  }</code></pre>    			
+		</div>
+		
+        <!-- -->
+        <br> 
+        
+  <div class="section">
+      <h5>Acknowledgements</h5>            
+      <p>
+      This work is supported by a grant from the Samsung GRO program, a Vannevar Bush Faculty Fellowship, and gifts from Adobe, Autodesk, and Snap.
+			</p>
+  </div>
+  </div>
+
+    <script type="text/javascript" src="../js/jquery.min.js"></script>
+    <script type="text/javascript" src="../js/footable.min.js"></script>
+
+    <script type="text/javascript">
+      jQuery(function($){
+          $('.table').footable();
+      });
+    </script>
+
+    <!-- End Document
+         –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  </body>
+</html>
