@@ -98,11 +98,11 @@
       <p align="center" style="margin-bottom:20px;">
         <sup>1</sup>Stanford University
         <span style="display:inline-block; width: 32px"></span>
-        <sup>2</sup>Adobe Research <br>
+        <sup>2</sup>Adobe Research
         <span style="display:inline-block; width: 32px"></span>
-        <sup>2</sup>KAIST <br>
+        <sup>3</sup>KAIST
         <span style="display:inline-block; width: 32px"></span>
-        <sup>2</sup>IITB <br>                
+        <sup>4</sup>IITB <br>                
       </p>
 
       <div class="venue">
@@ -110,7 +110,10 @@
       </div>
 
       <figure>
-        <img src="images/teaser3.png" style="width:100%"></img>
+        <center>
+        <img src="images/teaser3.png" style="width:80%"></img>
+        </center>
+
         <!-- <br> -->
       </figure>
       <div class="caption">
@@ -183,8 +186,7 @@
   </div>
 
   <div id="teaser" class="container" style="width:100%; margin:0; padding:0">
-    <h5>Qualitative Results</h5>
-    <p>Image-to-Mesh</p>
+    <h5>Image-to-Mesh</h5>
     <center>
       <img src="images/image2mesh.png" style="width:90%"></img>
         <div class="caption" >
@@ -193,9 +195,14 @@
           </p>
         </div>
         <br>
+    </center>
+  </div>
 
-      <p>Point Cloud-to-Mesh</p>
-      <img src="images/pc2mesh.png" style="width:90%"></img>
+  <div id="teaser" class="container" style="width:100%; margin:0; padding:0">
+    <h5>Point Cloud-to-Mesh</h5>
+    <center>
+
+      <img src="images/pc2mesh.png" style="width:50%"></img>
         <div class="caption" >
           <p align="justify">
             Visualization of qualitative results on the point cloud-to-mesh setup. Our network also achieves the best results as shown by the height of the chair seat, the base of the table, and the cabinet without shelves. 
@@ -203,26 +210,40 @@
         </div>
         <br>
 
-      <p>Joint Training on Neural Cages</p>
-      <img src="images/neural cages.png" style="width:90%"></img>
+    </center>
+  </div>
+
+    <div id="teaser" class="container" style="width:100%; margin:0; padding:0">
+    <h5>Joint Training on Neural Cages</h5>
+    <center>
+      <img src="images/neural cages.png" style="width:80%"></img>
         <div class="caption" >
           <p align="justify">
             We also show that the advantages of joint training is not specific to our novel deformation function, but also improves other state-of-the-art deformation modules such as neural cages. Observe that the retrieved models of our joint approaches better match the geometry of the input chair and sofa. Moreover, our structure-aware deformation function is able to match the local part geometries such as the thickness of the sofa. 
           </p>
         </div>
         <br>
+    </center>
+  </div>
 
-      <p>Automatic Segmentation</p>
-      <img src="images/complementme.png" style="width:90%"></img>
+
+  <div id="teaser" class="container" style="width:100%; margin:0; padding:0">
+    <h5>Automatic Segmentation</h5>
+    <center>
+      <img src="images/complementme.png" style="width:60%"></img>
         <div class="caption" >
           <p align="justify">
             As manual fine-grain part annotating is a tedious task, large databases of such models are scarce.  We also show that our approach works on automatically segmented models such as those found in ComplementMe, enabling the use of our method on a wider array of source databases.
           </p>
         </div>
         <br>
+    </center>
+  </div>
 
-      <p>Applications</p>
-      <img src="images/applications.png" style="width:90%"></img>
+  <div id="teaser" class="container" style="width:100%; margin:0; padding:0">
+    <h5>Applications</h5>
+    <center>
+      <img src="images/applications.png" style="width:100%"></img>
         <div class="caption" >
           <p align="justify">
             Applications of our pipeline on fitting to product images from Google search and to real world scans. 
